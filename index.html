@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Project</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- login section -->
+    <section>
+        <div class="container">
+            <div id="loginForm">
+                <h1 class="text-center padding100">Welcome To Ikhtiar's Bank</h1>
+
+                <div class="form">
+                <h4>Login</h4>
+                <input type="text" class="form-control" placeholder="email"><br>
+                <input type="password" class="form-control" placeholder="password"><br>
+                <button 
+               id="login" class="btn btn-success">Enter</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- transaction area -->
+
+    <div id="transactionArea">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="deposit">
+                        <h4>deposit</h4>
+                        <h2>$<span id="totalDeposit">00</span></h2>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="withdraw">
+                    <h4>withdraw</h4>
+                    <h2>$<span id="totalWithdraw">00</span></h2>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="balance">
+                    <h4>balance</h4>
+                    <h2>$<span id="totalBalance">1240</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- input section -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="inputBox">
+                    <h3>Deposit</h3><br>
+                    <input id="inputDeposit" type="text" class="form-control" placeholder="$ amount of you want to deposit"><br>
+                    <button id="deposit" class="btn btn-success">
+                        deposit
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="inputBox">
+                    <h3>Withdraw</h3><br>
+                    <input id="inputWithdraw" type="text" class="form-control" placeholder="$ amount of you want to withdraw"><br>
+                    <button id="withdraw" class="btn btn-success">
+                        withdraw
+                    </button>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
