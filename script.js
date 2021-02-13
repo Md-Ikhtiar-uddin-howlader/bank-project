@@ -27,16 +27,23 @@ function minusAmount(id,withdrawAmount){
     document.getElementById(id).innerText = total;
 }
 
+function getInputValue(id){
+    let amount = document.getElementById(id).value;
+
+    amount = parseFloat(amount);
+
+    document.getElementById(id).value = "";
+
+    return amount;
+}
+
 document.getElementById("deposit").addEventListener("click",function(){
 
-    let depositAmount = document.getElementById("inputDeposit").value;
-
-    depositAmount = parseFloat(depositAmount);
+    let depositAmount = getInputValue("inputDeposit");
 
     addAmount("totalDeposit",depositAmount);
-    addAmount("totalBalance",depositAmount);
 
-    document.getElementById("inputDeposit").value = "";
+    addAmount("totalBalance",depositAmount);
     
 })
 
@@ -44,13 +51,11 @@ document.getElementById("deposit").addEventListener("click",function(){
 
 document.getElementById("withdraw").addEventListener("click",function(){
 
-    let withdrawAmount = document.getElementById("inputWithdraw").value;
-
-    withdrawAmount = parseFloat(withdrawAmount);
+    let withdrawAmount =  getInputValue("inputWithdraw");
 
     addAmount("totalWithdraw",withdrawAmount);
+    
     minusAmount("totalBalance",withdrawAmount);
 
-    document.getElementById("inputWithdraw").value = "";
     
 })
